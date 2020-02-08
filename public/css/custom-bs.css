@@ -3801,7 +3801,7 @@ input[type="button"].btn-block {
     color: #fff; }
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
-
+ 
 .card {
   position: relative;
   display: -webkit-box;
@@ -8138,7 +8138,8 @@ a.text-dark:hover, a.text-dark:focus {
   .badge {
     border: 1px solid #000; }
   .table {
-    border-collapse: collapse !important; }
+    border-collapse: collapse !important; 
+         }
     .table td,
     .table th {
       background-color: #fff !important; }

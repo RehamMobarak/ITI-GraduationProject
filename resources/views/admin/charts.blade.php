@@ -7,7 +7,7 @@
 <div class="container ">
     <div class="m-5">
         <div class="m-5">
-            <h3 class="panel-title">Charts for our website</h3>
+            <h3 class="career-title">Charts for our website</h3>
         </div>
         <div class="row">
             <div id="gender_chart" class="col-lg-6 col-md-12 chartbox" >
