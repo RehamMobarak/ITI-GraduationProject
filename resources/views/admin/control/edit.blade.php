@@ -17,7 +17,7 @@
       <div class="card-body">
         <h5 class="card-title">Modify Assignment</h5>
         <p class="card-text">you can modify relationship tables here </p>
-        <a href="#" class="btn btn-primary">Modify</a>
+        <a href="/Modify/relationship" class="btn btn-primary">Modify</a>
       </div>
     </div>
   

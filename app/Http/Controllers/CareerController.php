@@ -139,6 +139,12 @@ class CareerController extends Controller
         ]);
     }
 
+    
+    public function ModifyRelationshipTables()
+    { 
+        return view('admin.control.modify_relationship_tables');
+    }
+
     public function ModifyCareer(Request $request)
     {
        $id=$request->job_id;
@@ -163,9 +169,9 @@ class CareerController extends Controller
        $category->update(
            [
             'category_name' => $request->category_name,
-            'image'=>$path
+            'image'=>$pathcategory_name
            ]
-       );
+       ); 
        
        return redirect()->route('ModifyMain')->with('categorymodifymessage','Category Modified Successfully !');
 
@@ -192,5 +198,35 @@ class CareerController extends Controller
 
     }
 
+    public function deleteCategoryIndex()
+    {
+        return view('admin.control.modify_career_assignments_index',[
+            'jobs'=> Career::all()]);   
+    }
+
+    public function deleteCategoryRelation($careerId)
+    {
+
+        $catsArray = career_category::where('career_id','=',$careerId)->get();
+        $catNamesArray = [];
+
+        foreach ($catsArray as $key => $value) {
+           $catNamesArray[$key] = Category::find($value['category_id'])->category_name;
+        }
+
+        // dd($catNamesArray);
+         return view('admin.control.modify_career_assignments',[
+        'career_categories'=>$catsArray,
+        'category_names'=>$catNamesArray
+    ]);
+    }
   
 }
+////
+
+// careerID = dropdown(id);
+
+// categoryID=career_category::where('career_id','=',careerID)->get();//cats ids
+
+// category=Category::find(categoryID);// get all rows that has catgory id 
+// dd(Category::find(1)->category_name);// category->catgory_name;;

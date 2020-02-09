@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+ 
 <!-- HOME -->
 <section class="home-section section-hero overlay slanted" id="home-section">
 

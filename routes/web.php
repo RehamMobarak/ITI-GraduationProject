@@ -69,7 +69,7 @@ Route::post('/contactus','MessageController@create');
 
 
 
-//autocomplete 
+//autocomplete  
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
 
 
@@ -93,6 +93,8 @@ Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
 Route::post('/Modify/career', 'CareerController@ModifyCareer')->name('ModifyCareer');
 Route::post('/Modify/category', 'CareerController@ModifyCategory')->name('ModifyCategory');
 Route::post('/Modify/content', 'CareerController@ModifyContent')->name('ModifyContent');
+Route::get('/Modify/relationship', 'CareerController@ModifyRelationshipTables')->name('ModifyRelationship');
+
 
 //view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
@@ -105,3 +107,8 @@ Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');
 //charts
 Route::get('/charts', 'ChartsController@index');
 });
+
+
+//modify assignments
+Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');
+Route::get('/modify-career-categories/{careerId}','CareerController@deleteCategoryRelation');

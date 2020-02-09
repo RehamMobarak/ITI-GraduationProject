@@ -24,7 +24,7 @@
             </div>
             @endif
         </form>
-    </div>
+    </div> 
 
     <div class="col-6">
         <form method="POST" action="/Modify/category" enctype="multipart/form-data">

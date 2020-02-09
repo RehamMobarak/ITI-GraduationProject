@@ -29,17 +29,17 @@ class HomeController extends Controller
         // dd($career);
         return view('home',[
             'jobs'=> Career::all(),
-            
+             
         ]);
     }
 
 
    
-    public function autocomplete(Request $request)
-    {
-        $data = Career::select("job_name as name")->where("job_name","LIKE","%{$request->input('query')}%")->get();
-        return response()->json($data);
-    }
+    // public function autocomplete(Request $request)
+    // {
+    //     $data = Career::select("job_name as name")->where("job_name","LIKE","%{$request->input('query')}%")->get();
+    //     return response()->json($data);
+    // }
 
 
 
