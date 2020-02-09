@@ -112,3 +112,8 @@ Route::get('/charts', 'ChartsController@index');
 //modify assignments
 Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');
 Route::get('/modify-career-categories/{careerId}','CareerController@deleteCategoryRelation');
+Route::get('/deleteCareerCategory/{categoryId}','CareerController@deleteCareerCategory');
+
+
+
+

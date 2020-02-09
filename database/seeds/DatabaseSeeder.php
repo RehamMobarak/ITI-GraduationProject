@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make("12345678"),
             'country' => 'Egypt',
-            'birthdate' => '1996-08-04',
+            'birthdate' => '1996-08-04', 
             'gender' => 'female',
-            'image' => 'https://avatars3.githubusercontent.com/u/58627253?v=4',
+            'image' => '/image/avatar.png',
             'role'=>'admin',
             'remember_token' => Str::random(10),
 

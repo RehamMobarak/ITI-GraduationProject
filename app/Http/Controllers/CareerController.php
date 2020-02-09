@@ -201,24 +201,42 @@ class CareerController extends Controller
     public function deleteCategoryIndex()
     {
         return view('admin.control.modify_career_assignments_index',[
-            'jobs'=> Career::all()]);   
+            'jobs'=> Career::all()
+            ]);   
     }
 
     public function deleteCategoryRelation($careerId)
     {
 
         $catsArray = career_category::where('career_id','=',$careerId)->get();
+
+        $cat_ids =[];
+        
+        foreach ($catsArray as $key => $value)
+         {
+            $cat_ids[$key] = $value['category_id'];
+         }
+
+        //  dd($cat_ids);
+          
         $catNamesArray = [];
+        foreach ($catsArray as $cat_ids[$key] => $value)
+         {
+            $catNamesArray[$key] =Category::find($value['category_id'])->category_name;
+         }
 
-        foreach ($catsArray as $key => $value) {
-           $catNamesArray[$key] = Category::find($value['category_id'])->category_name;
-        }
-
-        // dd($catNamesArray);
-         return view('admin.control.modify_career_assignments',[
+        
+        return view('admin.control.modify_career_assignments',[
         'career_categories'=>$catsArray,
         'category_names'=>$catNamesArray
-    ]);
+        ]);
+
+    }
+
+
+    public function deleteCareerCategory($categoryId)
+    {
+        dd($categoryId);
     }
   
 }
