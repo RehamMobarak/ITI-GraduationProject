@@ -87,13 +87,40 @@ Route::post('/add-career/content','CareerController@storeContent');
 //assign
 Route::post('/add-career/assign_career_category', 'CareerController@AssignCareerCategory')->name('assign.category');
 Route::post('/add-career/assign_category_content', 'CareerController@AssignCategoryContent')->name('assign.content');
-//modification
+//modification main tables
 Route::get('/Edit', 'CareerController@edit')->name('edit');
 Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
 Route::post('/Modify/career', 'CareerController@ModifyCareer')->name('ModifyCareer');
 Route::post('/Modify/category', 'CareerController@ModifyCategory')->name('ModifyCategory');
 Route::post('/Modify/content', 'CareerController@ModifyContent')->name('ModifyContent');
 Route::get('/Modify/relationship', 'CareerController@ModifyRelationshipTables')->name('ModifyRelationship');
+//modify career assignments
+Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');
+Route::get('/modify-career-categories/{careerId}','CareerController@deleteCategoryRelation')->name('AssignedCategory');
+Route::get('/deleteCareerCategory/{categoryId}','CareerController@deleteCareerCategory');
+
+//modify category assignments
+Route::get('/modify-category-contents','CategoryController@deleteContentIndex');
+Route::get('/modify-category-contents/{categoryId}','CategoryController@deleteContentRelation')->name('AssignedContent');
+Route::get('/deleteCategoryContent/{contentId}','CategoryController@deleteCategoryContent');
+
+
+
+//delete from main tables
+Route::get('/delete',function()
+{
+    return view('admin.control.delete.index');
+});
+
+Route::get('/delete/career','CareerController@DeleteIndex');
+Route::get('/delete/category','CategoryController@DeleteIndex');
+Route::get('/delete/content','ContentController@DeleteIndex');
+
+Route::get('/delete/career/{career_id}','CareerController@delete');
+Route::get('/delete/category/{category_id}','CategoryController@delete');
+Route::get('/delete/content/{content_id}','ContentController@delete');
+
+
 
 
 //view messages
@@ -109,15 +136,6 @@ Route::get('/charts', 'ChartsController@index');
 });
 
 
-//modify career assignments
-Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');
-Route::get('/modify-career-categories/{careerId}','CareerController@deleteCategoryRelation')->name('AssignedCategory');
-Route::get('/deleteCareerCategory/{categoryId}','CareerController@deleteCareerCategory');
-
-//modify category assignments
-Route::get('/modify-category-contents','CategoryController@deleteContentIndex');
-Route::get('/modify-category-contents/{categoryId}','CategoryController@deleteContentRelation')->name('AssignedContent');
-Route::get('/deleteCategoryContent/{contentId}','CategoryController@deleteCategoryContent');
 
 
 

@@ -57,11 +57,26 @@ class CategoryController extends Controller
 
     public function deleteCategoryContent($contentId)
     {
-
        $row = category_content::find($contentId);
        $row->delete();
        return redirect()->back()->with('deleteAssignedContentmessage','Record deleted Successfully !');
-
-      
     }
+
+
+    //delete the category
+    public function DeleteIndex()
+   {
+     return view('admin.control.delete.delete_category_index',[
+        'categories'=>Category::all(),
+        ]);   
+
+   }
+
+   public function delete($category_id)
+   {
+      $row = Category::find($category_id);
+      $row->delete();
+      return redirect()->back()->with('deleteCategorymessage',$row['category_name']."".' deleted Successfully !');
+
+   }
 }

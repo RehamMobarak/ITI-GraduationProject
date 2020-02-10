@@ -51,7 +51,7 @@
         </form>
     </div>
 
-</div>
+</div> 
 
 <div class="row m-auto no-gutters ">
     <div class="col-6 ">

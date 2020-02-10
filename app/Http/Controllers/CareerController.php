@@ -240,5 +240,20 @@ class CareerController extends Controller
 
       
     }
-  
+  //delete the career
+   public function DeleteIndex()
+   {
+     return view('admin.control.delete.delete_career_index',[
+        'jobs'=> Career::all()
+        ]);   
+
+   }
+
+   public function delete($career_id)
+   {
+      $row = Career::find($career_id);
+      $row->delete();
+      return redirect()->back()->with('deleteCareermessage',$row['job_name']."". 'deleted Successfully !');
+
+   }
 }

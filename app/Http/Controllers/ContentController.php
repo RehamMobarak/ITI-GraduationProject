@@ -29,4 +29,23 @@ class ContentController extends Controller
             
         ]);
     }
+
+     //delete the content
+     public function DeleteIndex()
+     {
+       return view('admin.control.delete.delete_content_index',[
+          'contents'=> Content::all(),
+          ]);   
+  
+     }
+  
+     public function delete($content_id)
+     {
+        $row = Content::find($content_id);
+        $row->delete();
+        return redirect()->back()->with('deleteContentmessage',$row['content_name']."".'deleted Successfully !');
+  
+     }
+    
+
 }
