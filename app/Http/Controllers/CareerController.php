@@ -210,25 +210,29 @@ class CareerController extends Controller
 
         $catsArray = career_category::where('career_id','=',$careerId)->get();
 
-        $cat_ids =[];
+        // $cat_ids =[];
         
-        foreach ($catsArray as $key => $value)
-         {
-            $cat_ids[$key] = $value['category_id'];
-         }
+        // foreach ($catsArray as $key => $value)
+        //  {
+        //     $cat_ids[$key] = $value['category_id'];
+        //  }
 
         //  dd($cat_ids);
           
         $catNamesArray = [];
-        foreach ($catsArray as $cat_ids[$key] => $value)
+        $rowID;
+        foreach ($catsArray as $key => $value)
          {
-            $catNamesArray[$key] =Category::find($value['category_id'])->category_name;
+            $rowID =$value['id'];
+            $catNamesArray[$rowID] =Category::find($value['category_id'])->category_name;
+            // dd($rowID);
          }
-
+// dd($catNamesArray);
         
         return view('admin.control.modify_career_assignments',[
         'career_categories'=>$catsArray,
-        'category_names'=>$catNamesArray
+        'category_names'=>$catNamesArray,
+        
         ]);
 
     }
@@ -236,15 +240,12 @@ class CareerController extends Controller
 
     public function deleteCareerCategory($categoryId)
     {
-        dd($categoryId);
+
+       $row = career_category::find($categoryId);
+       $row->delete();
+       return redirect()->back()->with('deleteAssignedCategorymessage','Record deleted Successfully !');
+
+      
     }
   
 }
-////
-
-// careerID = dropdown(id);
-
-// categoryID=career_category::where('career_id','=',careerID)->get();//cats ids
-
-// category=Category::find(categoryID);// get all rows that has catgory id 
-// dd(Category::find(1)->category_name);// category->catgory_name;;

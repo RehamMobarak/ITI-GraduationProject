@@ -6,6 +6,11 @@
 
 <div class="container mx-5 text-center">
     <div class="table-responsive mx-5 my-2">
+        @if(session()->has('deleteAssignedCategorymessage'))
+        <div class="alert alert-success">
+            {{ session()->get('deleteAssignedCategorymessage') }}
+        </div>
+        @endif
         <table class="table table-hover table-bordered mb-5">
             <thead class="thead-dark ">
                 <tr>
@@ -14,16 +19,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($career_categories as $index => $value)
+
                 @foreach($category_names as $index => $CategoryName)
                 <tr>
                     <td>{{$CategoryName}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/deleteCareerCategory/{{$value['category_id']}}">DELETE</a></td>
-
-
+                    <td><a class="btn btn-outline-secondary" href="/deleteCareerCategory/{{$index}}">DELETE</a></td>
                 </tr>
                 @endforeach
-                @endforeach
+
 
             </tbody>
         </table>
