@@ -26,7 +26,7 @@
 
             <div class="col-6 col-md-6 col-lg-5 mb-4 mb-lg-5">
 
-                <a href="#" class="block__16443 text-center d-block">
+                <a href="/modify-category-contents" class="block__16443 text-center d-block">
                     <span class="custom-icon mx-auto">
                     <span class="icon-line-tools d-block"></span>
                     </span>

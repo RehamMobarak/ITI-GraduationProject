@@ -5,22 +5,13 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Content;
 use App\Career;
-
+use App\category_content;
 
 
 
 class CategoryController extends Controller
 {
-    
-    // public function index()
-    // {
-       
-    //     return view('categories.index', [
-    //         'categories' => Category::all(),
-          
-    //     ]);
-    // }
-
+   
 
     public function index($career_id)
     {
@@ -30,5 +21,47 @@ class CategoryController extends Controller
               
           
         ]);
+    }
+
+    public function deleteContentIndex()
+    {
+        return view('admin.control.modify_category_assignments_index',[
+            'categories'=>Category::all(),
+            ]);   
+    }
+
+
+    public function deleteContentRelation($categoryId)
+    {
+
+        $contentsArray = category_content::where('category_id','=',$categoryId)->get();
+
+        $contentNamesArray = [];
+        $rowID;
+        foreach ($contentsArray as $key => $value)
+         {
+            $rowID =$value['id'];
+            $contentNamesArray[$rowID] =Content::find($value['content_id'])->content_name;
+            
+         }
+
+        
+        return view('admin.control.modify_category_assignments',[
+       
+        'content_names'=>$contentNamesArray,
+        
+        ]);
+
+    }
+
+
+    public function deleteCategoryContent($contentId)
+    {
+
+       $row = category_content::find($contentId);
+       $row->delete();
+       return redirect()->back()->with('deleteAssignedContentmessage','Record deleted Successfully !');
+
+      
     }
 }

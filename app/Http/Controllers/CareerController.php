@@ -6,7 +6,7 @@ use App\Career;
 use App\Category;
 use App\Content;
 use App\career_category;
-use App\category_content;
+
 
 
 class CareerController extends Controller
@@ -205,29 +205,22 @@ class CareerController extends Controller
             ]);   
     }
 
+    
+
     public function deleteCategoryRelation($careerId)
     {
 
         $catsArray = career_category::where('career_id','=',$careerId)->get();
 
-        // $cat_ids =[];
-        
-        // foreach ($catsArray as $key => $value)
-        //  {
-        //     $cat_ids[$key] = $value['category_id'];
-        //  }
-
-        //  dd($cat_ids);
-          
         $catNamesArray = [];
         $rowID;
         foreach ($catsArray as $key => $value)
          {
             $rowID =$value['id'];
             $catNamesArray[$rowID] =Category::find($value['category_id'])->category_name;
-            // dd($rowID);
+            
          }
-// dd($catNamesArray);
+
         
         return view('admin.control.modify_career_assignments',[
         'career_categories'=>$catsArray,

@@ -109,11 +109,15 @@ Route::get('/charts', 'ChartsController@index');
 });
 
 
-//modify assignments
+//modify career assignments
 Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');
 Route::get('/modify-career-categories/{careerId}','CareerController@deleteCategoryRelation')->name('AssignedCategory');
 Route::get('/deleteCareerCategory/{categoryId}','CareerController@deleteCareerCategory');
 
+//modify category assignments
+Route::get('/modify-category-contents','CategoryController@deleteContentIndex');
+Route::get('/modify-category-contents/{categoryId}','CategoryController@deleteContentRelation')->name('AssignedContent');
+Route::get('/deleteCategoryContent/{contentId}','CategoryController@deleteCategoryContent');
 
 
 
