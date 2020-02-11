@@ -1940,3 +1940,9 @@ input[type="radio"]+label {
     margin-top: -110px;
     margin-bottom: -1px;
 }
+
+.controlimages {
+    width: 150px;
+    height: 150px;
+
+}

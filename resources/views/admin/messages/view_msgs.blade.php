@@ -29,7 +29,7 @@
                     <td>{{$msg['subject']}}</td>
                     <td>
                     <a class="btn btn-outline-secondary" href="{{route('msgs.show',['msg' => $msg['id'] ])}}">View</a>
-                    <a class="btn btn-outline-secondary" href="{{route('msgs.delete',['msg' => $msg['id'] ])}}">Delete</a>
+                    <a class="btn btn-outline-secondary" href="{{route('msgs.delete',['msg' => $msg['id'] ])}}" onclick="return confirm('Are you sure?')" >Delete</a>
                     </td>
                 </tr>
                 @endforeach
