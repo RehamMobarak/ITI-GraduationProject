@@ -24,7 +24,7 @@
                 @foreach($jobs as $index => $job)
                 <tr>
                     <td>{{$job['job_name']}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/delete/career/{{$job['id']}}">DELETE</a></td>
+                    <td><a class="btn btn-outline-secondary" href="/delete/career/{{$job['id']}}" onclick="return confirm('Are you sure?')" >DELETE</a></td>
                 </tr>
                 @endforeach
 

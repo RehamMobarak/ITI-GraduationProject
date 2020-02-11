@@ -23,7 +23,7 @@
                 @foreach($category_names as $index => $CategoryName)
                 <tr>
                     <td>{{$CategoryName}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/deleteCareerCategory/{{$index}}">DELETE</a></td>
+                    <td><a class="btn btn-outline-secondary" href="/deleteCareerCategory/{{$index}}" onclick="return confirm('Are you sure?')">DELETE</a></td>
                 </tr>
                 @endforeach
 

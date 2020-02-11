@@ -24,7 +24,7 @@
                 @foreach($contents as $index => $content)
                 <tr>
                     <td>{{$content['content_name']}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/delete/content/{{$content['id']}}">DELETE</a></td>
+                    <td><a class="btn btn-outline-secondary" href="/delete/content/{{$content['id']}}" onclick="return confirm('Are you sure?')">DELETE</a></td>
                 </tr>
                 @endforeach
 

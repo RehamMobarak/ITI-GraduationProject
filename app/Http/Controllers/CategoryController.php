@@ -55,9 +55,9 @@ class CategoryController extends Controller
     }
 
 
-    public function deleteCategoryContent($contentId)
+    public function deleteCategoryContent($rowId)
     {
-       $row = category_content::find($contentId);
+       $row = category_content::find($rowId);
        $row->delete();
        return redirect()->back()->with('deleteAssignedContentmessage','Record deleted Successfully !');
     }

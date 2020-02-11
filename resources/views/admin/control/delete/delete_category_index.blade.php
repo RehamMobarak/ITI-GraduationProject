@@ -24,7 +24,7 @@
                 @foreach($categories as $index => $category)
                 <tr>
                     <td>{{$category['category_name']}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/delete/category/{{$category['id']}}">DELETE</a></td>
+                    <td><a class="btn btn-outline-secondary" href="/delete/category/{{$category['id']}}" onclick="return confirm('Are you sure?')">DELETE</a></td>
                 </tr>
                 @endforeach
 

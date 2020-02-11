@@ -101,8 +101,8 @@ Route::get('/deleteCareerCategory/{categoryId}','CareerController@deleteCareerCa
 
 //modify category assignments
 Route::get('/modify-category-contents','CategoryController@deleteContentIndex');
-Route::get('/modify-category-contents/{categoryId}','CategoryController@deleteContentRelation')->name('AssignedContent');
-Route::get('/deleteCategoryContent/{contentId}','CategoryController@deleteCategoryContent');
+Route::get('/modify-category-contents/{rowId}','CategoryController@deleteContentRelation')->name('AssignedContent');
+Route::get('/deleteCategoryContent/{rowId}','CategoryController@deleteCategoryContent');
 
 
 

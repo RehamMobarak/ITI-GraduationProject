@@ -23,7 +23,7 @@
                 @foreach($content_names as $index => $ContentName)
                 <tr>
                     <td>{{$ContentName}}</td>
-                    <td><a class="btn btn-outline-secondary" href="/deleteCategoryContent/{{$index}}">DELETE</a></td>
+                    <td><a class="btn btn-outline-secondary" href="/deleteCategoryContent/{{$index}}" onclick="return confirm('Are you sure?')">DELETE</a></td>
                 </tr>
                 @endforeach
 
