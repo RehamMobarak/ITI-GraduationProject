@@ -7,6 +7,7 @@ use App\Career;
 use App\Category;
 use App\Content;
 use App\career_category;
+use App\category_content;
 
 class CareerController extends Controller
 {
