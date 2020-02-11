@@ -5,7 +5,7 @@
   <div class="col-sm-6 col-md-4  card">
   
       <div class="card-body">
-        <h5 class="card-title">Modify Career-Category-Content</h5>
+        <h5 class="card-title">Modify Main Tables</h5>
         <p class="card-text">you can modify name,image,content or links</p>
         <a href="/Modify" class="btn btn-primary">Modify</a>
       </div>
@@ -15,7 +15,7 @@
   <div class="col-sm-6 col-md-4  card ">
   
       <div class="card-body">
-        <h5 class="card-title">Modify Assignment</h5>
+        <h5 class="card-title">Modify Assignment Tables</h5>
         <p class="card-text">you can modify relationship tables here </p>
         <a href="/Modify/relationship" class="btn btn-primary">Modify</a>
       </div>

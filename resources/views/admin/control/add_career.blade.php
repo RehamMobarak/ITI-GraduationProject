@@ -8,7 +8,7 @@
             @csrf
             <fieldset class="add-career">
                 <legend>Career:</legend>
-                <p>Job Name:</p> <input name="job_name" type="text"><br><br>
+                <p>Job Name:</p> <input name="job_name" type="text" required><br><br>
                 <input type="submit" class="btn btn-info " value="Add Career">
             </fieldset>
             @if(session()->has('careermessage'))
@@ -19,7 +19,7 @@
         </form>
 
     </div>
- 
+
 
     <div class="col-6">
         <form method="POST" action="/add-career/category" enctype="multipart/form-data">
@@ -27,7 +27,7 @@
 
             <fieldset class="add-career  ">
                 <legend>Category:</legend>
-                <p>category Name:</p> <input name="category_name" type="text"><br><br>
+                <p>category Name:</p> <input name="category_name" type="text" required><br><br>
                 <p>category image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Add Category">
             </fieldset>
@@ -48,9 +48,9 @@
 
             <fieldset class="add-career-content add-career">
                 <legend>Content:</legend>
-                <p>Content Name:</p> <input name="content_name" type="text"><br><br>
-                <p>Content details:</p> <input name="content_details" type="text"><br><br>
-                <p> Content links:</p> <input name="links" type="text"><br><br>
+                <p>Content Name:</p> <input name="content_name" type="text" required><br><br>
+                <p>Content details:</p> <input name="content_details" type="text" required><br><br>
+                <p> Content links:</p> <input name="links" type="text" required><br><br>
                 <p>Content image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Add Content">
             </fieldset>
@@ -76,14 +76,16 @@
                 <p>assign the career </p>
 
                 <select name="job_name" class="form-control Career">
+                    <option> all careers</option>
                     @foreach($jobs as $index => $job)
-                    <option value="{{$job->id}}" selected>{{$job->job_name}}</option>
+                    <option value="{{$job->id}}" >{{$job->job_name}}</option>
                     @endforeach
                 </select>
                 <input name="career_id" id="career_id" type="text" value="" hidden>
                 <p>To the category</p>
 
                 <select name="category_name" class="form-control assigncategory">
+                    <option> all categories</option>
                     @foreach($categories as $index => $cat)
                     <option value="{{$cat->id}}">{{$cat->category_name}}</option>
                     @endforeach
@@ -107,6 +109,7 @@
                 <legend>Category-content:</legend>
                 <p>assign the category </p>
                 <select name="category_name" class="form-control category">
+                    <option> all categories</option>
                     @foreach($categories as $index => $cat)
                     <option value="{{$cat->id}}">{{$cat->category_name}}</option>
                     @endforeach
@@ -114,6 +117,7 @@
                 <input name="category_id" id="category_id" type="text" hidden>
                 <p>To the content</p>
                 <select name="category_name" class="form-control assigncontent">
+                    <option> all contents</option>
                     @foreach($contents as $index => $con)
                     <option value="{{$con->id}}">{{$con['content_name']}}</option>
                     @endforeach
@@ -123,7 +127,7 @@
             </fieldset>
             @if(session()->has('categorycontentmessage'))
             <div class="alert alert-success">
-             {{ session()->get('categorycontentmessage') }}
+                {{ session()->get('categorycontentmessage') }}
             </div>
             @endif
         </form>

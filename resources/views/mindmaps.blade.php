@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="col-md-6 col-lg-4 item">
-                <a href="images/Web.png" class="item-wrap fancybox" data-fancybox="gallery2">
+                <a href="images/web.png" class="item-wrap fancybox" data-fancybox="gallery2">
                     <span class="icon-search2"></span>
                     <img class="img-fluid" src="images/web.png">
                 </a>

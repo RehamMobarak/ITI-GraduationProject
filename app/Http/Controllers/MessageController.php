@@ -45,6 +45,14 @@ class messageController extends Controller
         return view('admin.messages.reply', ['msg' => $msg]);
     }
 
+    public function delete($id)
+    {
+        $msg = Message::find($id);
+        $msg->delete();
+        return redirect()->back()->with('deleteMsg','Message deleted Successfuly!! ');
+        
+    }
+
     public function sendMail()
     {
         // dd(request('replymsg'));

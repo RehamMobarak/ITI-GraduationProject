@@ -126,6 +126,7 @@ Route::get('/delete/content/{content_id}','ContentController@delete');
 //view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
 Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
+Route::get('/deletemessages/{msg}', 'MessageController@delete')->name('msgs.delete');
 
 //relpy messages
 Route::get('/reply/{msg}', 'MessageController@reply')->name('reply');
