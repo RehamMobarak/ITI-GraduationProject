@@ -163,7 +163,7 @@ class CareerController extends Controller
         $category->update(
            [
             'category_name' => $request->category_name,
-            'image'=>$pathcategory_name
+            'image'=>$path
            ]
        );
        
