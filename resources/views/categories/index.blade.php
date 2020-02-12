@@ -18,7 +18,7 @@
 
                 <a href="{{route('contents.index',['cat_id' => $value['id'] ])}}"
                     class="block__16443 text-center d-block">
-                    <span class="custom-icon mx-auto"><img src="/{{$value['image']}}" width="85" height="85"
+                    <span class="custom-icon mx-auto"><img src="{{$value['image']}}" width="85" height="85"
                             class="icon-line-tools d-block"></span>
                     <h3>{{$value['category_name']}}</h3>
                 </a>

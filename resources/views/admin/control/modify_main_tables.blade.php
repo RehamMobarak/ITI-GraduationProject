@@ -16,9 +16,16 @@
                     @endforeach
                 </select>
                 <input type="text" id="job_id" name="job_id" hidden>
-                <p>Job Name:</p> <input name="job_name" placeholder="new job name" type="text" required><br><br>
+                <p>Job Name:</p> <input name="job_name" placeholder="new job name" type="text"  ><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Career">
             </fieldset>
+            @if (session()->has('modifyCareerError'))
+            <div class="alert alert-warning alert-block>
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('modifyCareerError') }}</strong>
+            </div>
+            @endif
+
             @if(session()->has('careerModifymessage'))
             <div class="alert alert-success">
                 {{ session()->get('careerModifymessage') }}
@@ -42,10 +49,18 @@
                 </select>
                 <input type="text" id="cat_id" name="cat_id" hidden>
 
-                <p>category Name:</p> <input name="category_name" type="text" placeholder="new category name" ><br><br>
+                <p>category Name:</p> <input name="category_name" type="text" placeholder="new category name"><br><br>
                 <p>category image:</p> <input name="image" type="file"><br><br>
+
                 <input type="submit" class="btn btn-info " value="Modify Category">
             </fieldset>
+            @if (session()->has('modifyCategoryError'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('modifyCategoryError') }}</strong>
+            </div>
+            @endif
+
             @if(session()->has('categorymodifymessage'))
             <div class="alert alert-success">
                 {{ session()->get('categorymodifymessage') }}
@@ -72,12 +87,19 @@
                 </select>
                 <input type="text" id="con_id" name="con_id" hidden>
 
-                <p>Content Name:</p> <input name="content_name" type="text" required><br><br>
-                <p>Content details:</p> <input name="content_details" type="text" required><br><br>
-                <p>Content links:</p> <input name="links" type="text" required><br><br>
+                <p>Content Name:</p> <input name="content_name" type="text"  ><br><br>
+                <p>Content details:</p> <textarea rows="4" cols="50" name="content_details" type="text"  ></textarea><br><br>
+                <p>Content links:</p> <textarea rows="4" cols="50" name="links" type="text"  ></textarea><br><br>
                 <p>Content image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Content">
             </fieldset>
+            @if (session()->has('modifyContentError'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('modifyContentError') }}</strong>
+            </div>
+            @endif
+
             @if(session()->has('contentmodifymessage'))
             <div class="alert alert-success">
                 {{ session()->get('contentmodifymessage') }}
