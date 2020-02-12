@@ -91,8 +91,8 @@ Route::post('/add-career/assign_category_content', 'CareerController@AssignCateg
 Route::get('/Edit', 'CareerController@edit')->name('edit');
 Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
 Route::post('/Modify/career', 'CareerController@ModifyCareer')->name('ModifyCareer');
-Route::post('/Modify/category', 'CareerController@ModifyCategory')->name('ModifyCategory');
-Route::post('/Modify/content', 'CareerController@ModifyContent')->name('ModifyContent');
+Route::post('/Modify/category', 'CategoryController@ModifyCategory')->name('ModifyCategory');
+Route::post('/Modify/content', 'ContentController@ModifyContent')->name('ModifyContent');
 Route::get('/Modify/relationship', 'CareerController@ModifyRelationshipTables')->name('ModifyRelationship');
 //modify career assignments
 Route::get('/modify-career-categories','CareerController@deleteCategoryIndex');

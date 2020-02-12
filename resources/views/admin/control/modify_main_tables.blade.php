@@ -19,8 +19,14 @@
                 <p>Job Name:</p> <input name="job_name" placeholder="new job name" type="text"  ><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Career">
             </fieldset>
+            @if (session()->has('NoSelectedCareerError'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('NoSelectedCareerError') }}</strong>
+            </div>
+            @endif
             @if (session()->has('modifyCareerError'))
-            <div class="alert alert-warning alert-block>
+            <div class="alert alert-warning alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>{{ session()->get('modifyCareerError') }}</strong>
             </div>
@@ -54,6 +60,12 @@
 
                 <input type="submit" class="btn btn-info " value="Modify Category">
             </fieldset>
+            @if (session()->has('NoSelectedCategoryError'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('NoSelectedCategoryError') }}</strong>
+            </div>
+            @endif
             @if (session()->has('modifyCategoryError'))
             <div class="alert alert-warning alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>
@@ -93,6 +105,14 @@
                 <p>Content image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Content">
             </fieldset>
+
+            @if (session()->has('NoSelectedContentError'))
+            <div class="alert alert-warning alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ session()->get('NoSelectedContentError') }}</strong>
+            </div>
+            @endif
+
             @if (session()->has('modifyContentError'))
             <div class="alert alert-warning alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>

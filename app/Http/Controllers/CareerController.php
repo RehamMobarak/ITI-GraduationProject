@@ -144,114 +144,29 @@ class CareerController extends Controller
 
     public function ModifyCareer(Request $request)
     {
-        $id = $request->job_id;
-        $career = Career::find($id);
+        if (!isset($request->job_id)) {
 
-        if (!isset($request->job_name)) {
-            $jobName = $career->job_name;
             return redirect()->route('ModifyMain')
-                ->with('modifyCareerError', 'Nothing has changed to modify!');
+                ->with('NoSelectedCareerError', 'There is no selected career to modify!');
+        } else {
+            $id = $request->job_id;
+            $career = Career::find($id);
 
-        }else{
-        $career->update(
-            ['job_name' => $request->job_name,]
-        );
+            if (!isset($request->job_name)) {
+                $jobName = $career->job_name;
+                return redirect()->route('ModifyMain')
+                    ->with('modifyCareerError', 'Nothing has changed to modify!');
+            } else {
+                $career->update(
+                    ['job_name' => $request->job_name,]
+                );
 
-        return redirect()->route('ModifyMain')->with('careerModifymessage', 'Career Modified Successfully !');
+                return redirect()->route('ModifyMain')->with('careerModifymessage', 'Career Modified Successfully !');
+            }
         }
-
-
     }
 
 
-
-    public function ModifyCategory(Request $request)
-    {
-        $id = $request->cat_id;
-        $category = Category::find($id);
-
-
-        if (!isset($request->category_name)) {
-            $categoryName = $category->category_name;
-        } else {
-            $categoryName = $request->category_name;
-        }
-
-        if (!isset($request->image)) {
-            $path = $category->image;
-        } else {
-            $path = $request->file('image')->store('images');
-            $request->image->move(public_path('images'), $path);
-        }
-
-        if (!isset($request->category_name) && !isset($request->image)) {
-            return redirect()->route('ModifyMain')
-                ->with('modifyCategoryError', 'Nothing has changed to modify!');
-        }else{
-            $category->update(
-            [
-                'category_name' => $categoryName,
-                'image' => $path
-            ]
-        );
-
-        return redirect()->route('ModifyMain')->with('categorymodifymessage', 'Category Modified Successfully !');
-        }
-
-
-        
-    }
-
-
-    public function ModifyContent(Request $request)
-    {
-
-        $id = $request->con_id;
-        $content = Content::find($id);
-
-        if (!isset($request->content_name)) {
-            $contentName = $content->content_name;
-        } else {
-            $contentName = $request->content_name;
-        }
-
-        if (!isset($request->content_details)) {
-            $contentDetails = $content->content_details;
-        } else {
-            $contentDetails = $request->content_details;
-        }
-
-        if (!isset($request->links)) {
-            $contentLinks = $content->links;
-        } else {
-            $contentLinks = $request->links;
-        }
-
-        if (!isset($request->image)) {
-            $path = $content->image;
-        } else {
-            $path = $request->file('image')->store('images');
-            $request->image->move(public_path('images'), $path);
-        }
-
-
-        if (!isset($request->content_name) && !isset($request->content_details)&&!isset($request->links) && !isset($request->image)) {
-            return redirect()->route('ModifyMain')
-                ->with('modifyContentError', 'Nothing has changed to modify!');
-        }else{
-            $content->update(
-                [
-                    'content_name' => $contentName,
-                    'content_details' => $contentDetails,
-                    'links' => $contentLinks,
-                    'image' => $path
-                ]
-            );
-    
-            return redirect()->route('ModifyMain')->with('contentmodifymessage', 'Content Modified Successfully !');
-       }
-    } 
-    
 
     public function deleteCategoryIndex()
     {
