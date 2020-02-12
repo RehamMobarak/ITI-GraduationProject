@@ -16,7 +16,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title text-primary">{{$value->content_name}}</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>{{$value->description}}</p>
           <a href="{{route('contents.view',['content' => $value->id ])}}" class="btn btn-outline-primary btn-lg">View</a>
         </div>
       </div>
