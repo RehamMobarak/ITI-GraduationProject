@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-7">
                 <div class="form-wrap">
-                    <h2 class="mb-4">Log in with your account</h2>
+                    <h2 class="mb-4" style="margin-top:-100px;">Log in with your account</h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="row">
@@ -46,25 +46,23 @@
                             
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" style="margin-bottom:15px;">
                             {{ __('Login') }}
                         </button>
                         @if (Route::has('password.request'))
-                        <a class="btn btn-link " href="{{ route('password.request') }}">
+                        <a class="btn btn-link " style="margin-top:-25px;" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                         @endif
                     </form>
-                    <div class="verticalline">
-                        <h4 class="login-with">OR</h4>
-                        <div class="col-md-3">
+                    <br><br>
+                        <h5 style="margin-bottom:-39px;">OR Login using</h5>
+                        <div class="col-md-3" style="padding-left:120px; margin-top:-10px; margin-left:120px;">
                         <a href="login/github" class="btn btn-dark text-light"><i class="fab fa-github" style="font-size: 50px"></i> </a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" style="margin-top:-63px; margin-left:120px;">
                         <a href="login/google" class="btn btn-outline-primary"><i class="fab fa-google" style="font-size: 50px"></i> </a>
                         </div>
-                    </div>
-                   
                 </div>
             </div>
         </div>
