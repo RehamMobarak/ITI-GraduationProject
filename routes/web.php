@@ -29,6 +29,12 @@ Route::get('/terms',function()
 {
     return view('terms');
 });
+//career
+Route::get('/career',function()
+{
+    return view('career');
+});
+
 
 //profiles
 Route::get('/profile','ProfileController@index')->name('profiles.index')->middleware('auth');

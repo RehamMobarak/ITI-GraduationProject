@@ -125,9 +125,9 @@
                         <h3>Company</h3>
                         <ul class="list-unstyled">
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="/career">Career</a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Resources</a></li>
+                           
                         </ul>
                     </div>
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
