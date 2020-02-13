@@ -37,7 +37,7 @@ body {
 
 .r-nav li {
    list-style: none;
-    float: right;
+    /*float: right;*/
     display: inline-block;
     width: 30px;
     
