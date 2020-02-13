@@ -19,10 +19,15 @@ Route::get('/',function(){
 });
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
-
+//privacy
 Route::get('/privacy',function()
 {
     return view('privacy');
+});
+//terms of use
+Route::get('/terms',function()
+{
+    return view('terms');
 });
 
 //profiles
