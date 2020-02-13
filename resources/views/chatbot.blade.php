@@ -5,7 +5,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Careery</title>
-  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -25,7 +24,7 @@
       
 	  <div  class="r-nav"> 
      <ul>
-		  <li> <a href="home.html">Back</a></li>
+		  <li> <a href="/">Back</a></li>
 		  
 		 
      </ul>
