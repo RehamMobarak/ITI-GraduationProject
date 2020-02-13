@@ -143,7 +143,7 @@
                         <h3>Support</h3>
                         <ul class="list-unstyled">
                             <li><a href="#">Support</a></li>
-                            <li><a href="#">Privacy</a></li>
+                            <li><a href="/privacy">Privacy</a></li>
                             <li><a href="#">Terms of Service</a></li>
                         </ul>
                     </div>

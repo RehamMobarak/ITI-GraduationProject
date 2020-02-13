@@ -20,6 +20,10 @@ Route::get('/',function(){
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
 
+Route::get('/privacy',function()
+{
+    return view('privacy');
+});
 
 //profiles
 Route::get('/profile','ProfileController@index')->name('profiles.index')->middleware('auth');
