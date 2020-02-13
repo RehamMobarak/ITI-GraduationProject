@@ -135,7 +135,7 @@
                         <ul class="list-unstyled">
                             <li><a href="/contactus">Support</a></li>
                             <li><a href="/privacy">Privacy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
