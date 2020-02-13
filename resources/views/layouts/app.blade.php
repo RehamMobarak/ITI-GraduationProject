@@ -121,16 +121,7 @@
         <footer class="site-footer slanted-footer">
             <div class="container">
                 <div class="row mb-5">
-                    <div class="col-6 col-md-3 mb-4 mb-md-0">
-                        <h3>Scenic Products</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Graphic Design</a></li>
-                            <li><a href="#">Web Developers</a></li>
-                            <li><a href="#">Resources</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-3 mb-4 mb-md-0">
+                   <div class="col-6 col-md-3 mb-4 mb-md-0">
                         <h3>Company</h3>
                         <ul class="list-unstyled">
                             <li><a href="#">About Us</a></li>
@@ -142,7 +133,7 @@
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
                         <h3>Support</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">Support</a></li>
+                            <li><a href="/contactus">Support</a></li>
                             <li><a href="/privacy">Privacy</a></li>
                             <li><a href="#">Terms of Service</a></li>
                         </ul>
