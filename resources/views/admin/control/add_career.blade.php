@@ -18,7 +18,7 @@
             @endif
         </form>
 
-    </div>
+    </div> 
 
 
     <div class="col-6">
@@ -63,10 +63,7 @@
     </div>
 </div>
 
-
-
 <h1 class="career-title mt-5"> ASSIGNMENT</h1>
-
 <div class="row m-auto no-gutters">
     <div class="col-6">
         <form method="POST" action="/add-career/assign_career_category">

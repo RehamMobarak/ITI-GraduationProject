@@ -12,8 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-
+       
         DB::table('users')->insert([
             'first_name' => 'admin',
             'last_name' => 'reham',
@@ -22,8 +21,9 @@ class DatabaseSeeder extends Seeder
             'country' => 'Egypt',
             'birthdate' => '1996-08-04', 
             'gender' => 'female',
-            'image' => '/image/avatar.png',
+            'image' => '/images/avatar.png',
             'role'=>'admin',
+            'background_img'=>'/images/background2.jpg',
             'remember_token' => Str::random(10),
 
         ]);
@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
                 
         //     ]
         // );
+
         // //categories
         // DB::table('categories')->insert(
         //     [
@@ -55,6 +56,7 @@ class DatabaseSeeder extends Seeder
         //     ]
         // );
         // // career_category
+    
         // DB::table('career_category')->insert(
         //     [
         //         [

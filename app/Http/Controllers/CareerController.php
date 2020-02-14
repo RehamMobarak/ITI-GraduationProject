@@ -13,7 +13,7 @@ class CareerController extends Controller
 {
     public function index()
     {
-        return view('admin.control.control');
+        return view('admin.control.careers_control');
     }
 
     //////////////////
@@ -93,7 +93,7 @@ class CareerController extends Controller
     {
         //dd($request);
         career_category::create(
-            [
+            [ 
                 'career_id' => $request->career_id,
                 'category_id' => $request->career_category_id,
             ]
@@ -123,13 +123,13 @@ class CareerController extends Controller
 
     public function edit()
     {
-        return view('admin.control.edit');
+        return view('admin.control.modify.edit');
     }
 
 
     public function modifyMainTables()
     {
-        return view('admin.control.modify_main_tables', [
+        return view('admin.control.modify.modify_main_tables', [
             'jobs' => Career::all(),
             'categories' => Category::all(),
             'contents' => Content::all(),
@@ -139,7 +139,7 @@ class CareerController extends Controller
 
     public function ModifyRelationshipTables()
     {
-        return view('admin.control.modify_relationship_tables');
+        return view('admin.control.modify.modify_relationship_tables');
     }
 
     public function ModifyCareer(Request $request)
@@ -165,12 +165,12 @@ class CareerController extends Controller
             }
         }
     }
-
+ 
 
 
     public function deleteCategoryIndex()
     {
-        return view('admin.control.modify_career_assignments_index', [
+        return view('admin.control.modify.modify_career_assignments_index', [
             'jobs' => Career::all()
         ]);
     }

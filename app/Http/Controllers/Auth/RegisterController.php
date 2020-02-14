@@ -59,6 +59,7 @@ class RegisterController extends Controller
             'birthdate' => ['required', 'date'],
             'gender' => ['required'],
             'image' => ['max:2048'], 
+            
 
         ]);
     }
@@ -87,6 +88,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'birthdate' => $data['birthdate'],
             'image' => $path,
+            'background_img'=>'/images/background2.png',
             'gender'=>$data['gender']
 
         ]);
@@ -94,6 +96,5 @@ class RegisterController extends Controller
 
         return $user;
         
-        // return redirect('welcome')->with('message',"SUCEESSSSSSS");
     }
 }

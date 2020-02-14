@@ -46,9 +46,8 @@ Route::get('/about',function(){
 
 
 //mindmaps
-Route::get('/mindmaps',function(){
-    return view('mindmaps');
-});
+Route::get('/mindmaps','MindmapsController@mindmap');
+
 
 //login with anotheer providers
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
@@ -64,7 +63,7 @@ Route::get('/faq',function(){
 Route::get('/contactus',function(){
     return view('contact');
 })->name('contactus');
-Route::post('/contactus','MessageController@create');
+Route::post('/contactus','Messcontrol.ageController@create');
 
 
 
@@ -72,13 +71,18 @@ Route::post('/contactus','MessageController@create');
 //autocomplete  
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
 
+                         ////////////
+                        // ADMIN  //
+                       ////////////
 
-                                          ////////////
-                                         //  ADMIN //
-                                        ////////////
 Route::group(['middleware' => ['auth']], function () {
-//control career//
-Route::get('/control', 'CareerController@index')->name('control');
+    
+Route::get('/control-panel',function()
+   {
+       return view('admin.control.control');
+       
+   });   
+Route::get('/career/control', 'CareerController@index')->name('career.control');
 Route::get('/control/add','CareerController@add')->name('control.Add');
 //add
 Route::post('/add-career','CareerController@storeCareer')->name("addcareer");
@@ -87,6 +91,7 @@ Route::post('/add-career/content','CareerController@storeContent');
 //assign
 Route::post('/add-career/assign_career_category', 'CareerController@AssignCareerCategory')->name('assign.category');
 Route::post('/add-career/assign_category_content', 'CareerController@AssignCategoryContent')->name('assign.content');
+
 //modification main tables
 Route::get('/Edit', 'CareerController@edit')->name('edit');
 Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
@@ -121,8 +126,6 @@ Route::get('/delete/category/{category_id}','CategoryController@delete');
 Route::get('/delete/content/{content_id}','ContentController@delete');
 
 
-
-
 //view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
 Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
@@ -134,6 +137,15 @@ Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');
 
 //charts
 Route::get('/charts', 'ChartsController@index');
+
+//control mindmaps
+Route::get('/mindmap/control','MindmapsController@index')->name('mindmap.index');
+Route::get('/mindmap/control/add','MindmapsController@add');
+Route::post('/mindmap/control/store','MindmapsController@store');
+Route::get('/mindmap/control/edit/{id}','MindmapsController@edit');
+Route::put('/mindmap/control/update/{id}','MindmapsController@update');
+Route::get('/mindmap/control/delete/{id}','MindmapsController@delete');
+
 });
 
 

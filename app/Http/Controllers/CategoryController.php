@@ -64,12 +64,12 @@ class CategoryController extends Controller
     }
     public function deleteContentIndex()
     {
-        return view('admin.control.modify_category_assignments_index', [
+        return view('admin.control.modify.modify_category_assignments_index', [
             'categories' => Category::all(),
         ]);
     }
 
-
+ 
     public function deleteContentRelation($categoryId)
     {
 
@@ -83,7 +83,7 @@ class CategoryController extends Controller
         }
 
 
-        return view('admin.control.modify_category_assignments', [
+        return view('admin.control.modify.modify_category_assignments', [
 
             'content_names' => $contentNamesArray,
 

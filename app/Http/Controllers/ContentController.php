@@ -35,7 +35,7 @@ class ContentController extends Controller
 
             return redirect()->route('ModifyMain')
                 ->with('NoSelectedContentError', 'There is no selected content to modify!');
-        } else {
+        } else { 
             $id = $request->con_id;
             $content = Content::find($id);
 

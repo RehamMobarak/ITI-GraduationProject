@@ -2,31 +2,40 @@
 
 @section('content')
 
-<section class="site-section block__62272" id="portfolio-section">
-    <div class="container">
-        <div class="row no-gutter justify-content-center">
-            <div class="item web col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2  mb-3 ">
-                <a href="/control/add" class="item-wrap">
-                    
-                    <img class="img-fluid controlimages" src="images/add.png">
-                </a>
-            </div>
-            <div class="item web col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 mx-xl-5">
-                <a href="/Edit" class="item-wrap">
-                    
-                    <img class="img-fluid controlimages" src="images/edit.png">
-                </a>
-            </div>
 
-            <div class="item brand col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3">
-                <a href="/delete" class="item-wrap">
-                    
-                    <img class="img-fluid controlimages" src="images/delete.png">
-                </a>
+<section class="site-section services-section bg-light block__62849" id="services-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade">
+                <h2 class="section-title mb-3">Control Panel</h2>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-6 col-md-6 col-lg-6 mb-4 mb-lg-5">
+
+                <a href="/mindmap/control"
+                    class="block__16443 text-center d-block">
+                    <span class="custom-icon mx-auto"><span class="icon-line-laptop d-block"></span></span>
+                    <h3>Mindmap Control</h3>
+                </a>
+
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-6 mb-4 mb-lg-5">
+
+                <a href="/career/control"
+                    class="block__16443 text-center d-block">
+                    <span class="custom-icon mx-auto"><span class="icon-line-laptop d-block"></span></span>
+                    <h3>Career Control</h3>
+                </a>
+
+            </div>
+        </div>
+
     </div>
 </section>
+
 
 
 @endsection

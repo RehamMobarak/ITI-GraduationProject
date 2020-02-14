@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-3 mr-auto">
         <div class="border p-4">
-          <img src="{{URL::to('/')}}/images/{{$course['image']}}" class="img-fluid">
+          <img src="{{$course['image']}}" class="img-fluid">
         </div>
       </div>
       <div class="col-lg-8">

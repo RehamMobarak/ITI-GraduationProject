@@ -12,8 +12,9 @@
 <div class="container main-secction">
     <!-- <div class="container main-secction"> -->
     <div class="row">
+        <!-- background image -->
         <div class="col-md-12 col-sm-12 col-xs-12 image-section">
-            <img src="/images/background2.jpg">
+            <img src="{{asset( Auth::user()->background_img)}}">
         </div>
         <div class="row user-left-part">
             <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
@@ -33,7 +34,8 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center mt-3">
-                        <a id="btn btn-primary" href="{{route('profiles.edit')}}" class="btn btn-success btn-block ">Edit Profile</a>
+                        <a id="btn btn-primary" href="{{route('profiles.edit')}}"
+                            class="btn btn-success btn-block ">Edit Profile</a>
 
                     </div>
 
@@ -51,7 +53,7 @@
                                                 class="fas fa-user-circle"></i>Personal </a>
                                     </li>
                                 </ul>
-                                    
+
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane fade show active mt-4 ml-4 " id="profile">
@@ -103,6 +105,11 @@
                                             <div class="col-md-6 ml-3">
                                                 <p>{{ Auth::user()->gender}}</p>
                                             </div>
+                                            @if(session()->has('UpdateProfileImg'))
+                                            <div class="alert alert-success">
+                                                {{ session()->get('UpdateProfileImg') }}
+                                            </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
