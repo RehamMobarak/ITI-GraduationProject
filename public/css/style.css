@@ -978,7 +978,7 @@ margin-top: -1000px;
     -webkit-transform: skewY(-5deg);
     -ms-transform: skewY(-5deg);
     transform: skewY(-5deg);
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     bottom: -100px;
     right: 0;
