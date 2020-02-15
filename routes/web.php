@@ -65,6 +65,11 @@ Route::get('/about',function(){
     return view('about');
 });
 
+//terms
+Route::get('/terms',function(){
+    return view('termsofuse');
+});
+
 
 //mindmaps
 Route::get('/mindmaps','MindmapsController@mindmap');
@@ -169,7 +174,7 @@ Route::get('/mindmap/control/delete/{id}','MindmapsController@delete');
 
 });
 
-
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 
 

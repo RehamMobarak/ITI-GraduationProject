@@ -51,6 +51,12 @@ class ContentController extends Controller
                 $contentDetails = $request->content_details;
             }
 
+            if (!isset($request->description)) {
+                $description = $content->description;
+            } else {
+                $description = $request->description;
+            }
+
             if (!isset($request->links)) {
                 $contentLinks = $content->links;
             } else {
@@ -65,13 +71,14 @@ class ContentController extends Controller
             }
 
 
-            if (!isset($request->content_name) && !isset($request->content_details) && !isset($request->links) && !isset($request->image)) {
+            if (!isset($request->content_name) && !isset($request->content_details) && !isset($request->description) && !isset($request->links) && !isset($request->image)) {
                 return redirect()->route('ModifyMain')
                     ->with('modifyContentError', 'Nothing has changed to modify!');
             } else {
                 $content->update(
                     [
                         'content_name' => $contentName,
+                        'description' =>  $description,
                         'content_details' => $contentDetails,
                         'links' => $contentLinks,
                         'image' => $path

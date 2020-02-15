@@ -117,7 +117,7 @@
             <fieldset class="add-career-content add-career">
                 <legend>Content:</legend>
                 <select name="content_name" class="form-control ModifyContent">
-                    <option>All Contents</option>
+                    <option>All Contents</option> 
 
                     @foreach($contents as $index => $con)
                     <option value="{{$con->id}}">{{$con->content_name}}</option>
@@ -126,6 +126,7 @@
                 <input type="text" id="con_id" name="con_id" hidden>
 
                 <p>Content Name:</p> <input name="content_name" type="text"><br><br>
+                <p>Content description:</p> <input name="description" type="text" ><br><br>
                 <p>Content details:</p> <textarea rows="4" cols="50" name="content_details"
                     type="text"></textarea><br><br>
                 <p>Content links:</p> <textarea rows="4" cols="50" name="links" type="text"></textarea><br><br>

@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/fonts/line-icons/style.css">
-    <!-- //chatbot -->
+    <!-- //chatbot shaimaa -->
 
-  
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+ 
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -119,6 +120,14 @@
             </div>
         </header>
 
+
+          <!-- chatbot icon (shaimaa) -->
+
+
+
+
+
+
         @yield('content')
         <footer class="site-footer slanted-footer">
             <div class="container">
@@ -126,9 +135,7 @@
                    <div class="col-6 col-md-3 mb-4 mb-md-0">
                         <h3>Company</h3>
                         <ul class="list-unstyled">
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/career">Career</a></li>
-                            <li><a href="#">Blog</a></li>   
+                            <li><a href="/about">About Us</a></li>   
                         </ul>
                     </div>
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
@@ -201,4 +208,13 @@
 
 </body>
 
+    <script>
+	    var botmanWidget = {
+	        aboutText: 'ssdsd',
+	        introMessage: "✋ Hi! I'm form codechief.org"
+	    };
+    </script>
+  
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+      
 </html>
