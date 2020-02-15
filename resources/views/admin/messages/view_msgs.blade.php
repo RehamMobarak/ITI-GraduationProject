@@ -32,7 +32,7 @@
                     <a class="btn btn-outline-secondary" href="{{route('msgs.delete',['msg' => $msg['id'] ])}}" onclick="return confirm('Are you sure?')" >Delete</a>
                     </td>
                 </tr>
-                @endforeach
+                @endforeach 
 
             </tbody>
         </table>

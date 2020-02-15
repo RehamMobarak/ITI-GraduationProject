@@ -29,6 +29,7 @@ $factory->define(User::class, function (Faker $faker) {
         'birthdate'=>$faker->date,
         'gender'=>$gender,
         'image'=>$faker->sentence,
+        'background_img'=>$faker->sentence,
         'remember_token' => Str::random(10),
     ];
 });

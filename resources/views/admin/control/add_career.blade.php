@@ -1,7 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="career-title"> ADD A CAREER</h1>
+<h1 class="career-title"> ADD NEW CAREER</h1>
+<h5 class="text-info sub-title">(Also Assignment Of Career-Category)</h5>
+<br>
+@if(session()->has('careercategorymessage'))
+<div class="alert alert-success">
+    {{ session()->get('careercategorymessage') }}
+</div>
+@endif
+
+@if(session()->has('careermessage'))
+<div class="alert alert-success">
+    {{ session()->get('careermessage') }}
+</div>
+@endif
+
+@if(session()->has('categorymessage'))
+<div class="alert alert-success">
+    {{ session()->get('categorymessage') }}
+</div>
+@endif
+
+@if(session()->has('contentmessage'))
+<div class="alert alert-success">
+    {{ session()->get('contentmessage') }}
+</div>
+@endif
+
+@if(session()->has('categorycontentmessage'))
+<div class="alert alert-success">
+    {{ session()->get('categorycontentmessage') }}
+</div>
+@endif
+
+@if(session()->has('NoCareer'))
+<div class="alert alert-danger alert-block">
+    {{ session()->get('NoCareer') }}
+</div>
+@endif
+
+@if(session()->has('NoCategory'))
+<div class="alert alert-danger alert-block">
+    {{ session()->get('NoCategory') }}
+</div>
+@endif
+
 <div class="row m-auto no-gutters">
     <div class="col-6">
         <form method="POST" action="/add-career">
@@ -11,14 +55,10 @@
                 <p>Job Name:</p> <input name="job_name" type="text" required><br><br>
                 <input type="submit" class="btn btn-info " value="Add Career">
             </fieldset>
-            @if(session()->has('careermessage'))
-            <div class="alert alert-success">
-                {{ session()->get('careermessage') }}
-            </div>
-            @endif
+
         </form>
 
-    </div> 
+    </div>
 
 
     <div class="col-6">
@@ -31,11 +71,7 @@
                 <p>category image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Add Category">
             </fieldset>
-            @if(session()->has('categorymessage'))
-            <div class="alert alert-success">
-                {{ session()->get('categorymessage') }}
-            </div>
-            @endif
+
         </form>
     </div>
 </div>
@@ -49,16 +85,13 @@
             <fieldset class="add-career-content add-career">
                 <legend>Content:</legend>
                 <p>Content Name:</p> <input name="content_name" type="text" required><br><br>
+                <p>Content description:</p> <input name="description" type="text" required><br><br>
                 <p>Content details:</p> <input name="content_details" type="text" required><br><br>
                 <p> Content links:</p> <input name="links" type="text" required><br><br>
                 <p>Content image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Add Content">
             </fieldset>
-            @if(session()->has('contentmessage'))
-            <div class="alert alert-success">
-                {{ session()->get('contentmessage') }}
-            </div>
-            @endif
+
         </form>
     </div>
 </div>
@@ -75,7 +108,7 @@
                 <select name="job_name" class="form-control Career">
                     <option> all careers</option>
                     @foreach($jobs as $index => $job)
-                    <option value="{{$job->id}}" >{{$job->job_name}}</option>
+                    <option value="{{$job->id}}">{{$job->job_name}}</option>
                     @endforeach
                 </select>
                 <input name="career_id" id="career_id" type="text" value="" hidden>
@@ -88,13 +121,9 @@
                     @endforeach
                 </select>
                 <input name="career_category_id" id="career_category_id" type="text" hidden>
-                <input type="submit" class="btn btn-info ml-2 " value="Assign">
+                <input type="submit" class="btn btn-info ml-2 mt-2 " value="Assign">
             </fieldset>
-            @if(session()->has('careercategorymessage'))
-            <div class="alert alert-success">
-                {{ session()->get('careercategorymessage') }}
-            </div>
-            @endif
+
         </form>
     </div>
 
@@ -120,13 +149,9 @@
                     @endforeach
                 </select>
                 <input name="category_content_id" id="category_content_id" type="text" hidden>
-                <input type="submit" class="btn btn-info ml-2  " value="Assign">
+                <input type="submit" class="btn btn-info ml-2 mt-2 " value="Assign">
             </fieldset>
-            @if(session()->has('categorycontentmessage'))
-            <div class="alert alert-success">
-                {{ session()->get('categorycontentmessage') }}
-            </div>
-            @endif
+
         </form>
     </div>
 </div>

@@ -80,6 +80,11 @@ class RegisterController extends Controller
             $path = $request->file('image')->store('images');
             $request->image->move(public_path('images'), $path);
         }
+
+        if (!isset($data['background_img'])) {
+            $background="/images/logo.jpg";
+        }
+
         $user= User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -88,7 +93,7 @@ class RegisterController extends Controller
             'country' => $data['country'],
             'birthdate' => $data['birthdate'],
             'image' => $path,
-            'background_img'=>'/images/background2.png',
+            'background_img'=>$background,
             'gender'=>$data['gender']
 
         ]);

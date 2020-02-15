@@ -2,6 +2,66 @@
 
 @section('content')
 <h1 class="career-title"> Modify Main Tables </h1>
+<br>
+@if (session()->has('NoSelectedCareerError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('NoSelectedCareerError') }}</strong>
+</div>
+@endif
+
+@if (session()->has('modifyCareerError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('modifyCareerError') }}</strong>
+</div>
+@endif
+
+@if(session()->has('careerModifymessage'))
+<div class="alert alert-success">
+    {{ session()->get('careerModifymessage') }}
+</div>
+@endif
+@if (session()->has('NoSelectedCategoryError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('NoSelectedCategoryError') }}</strong>
+</div>
+@endif
+
+@if (session()->has('modifyCategoryError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('modifyCategoryError') }}</strong>
+</div>
+@endif
+
+@if(session()->has('categorymodifymessage'))
+<div class="alert alert-success">
+    {{ session()->get('categorymodifymessage') }}
+</div>
+@endif
+
+
+@if (session()->has('NoSelectedContentError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('NoSelectedContentError') }}</strong>
+</div>
+@endif
+
+@if (session()->has('modifyContentError'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ session()->get('modifyContentError') }}</strong>
+</div>
+@endif
+
+@if(session()->has('contentmodifymessage'))
+<div class="alert alert-success">
+    {{ session()->get('contentmodifymessage') }}
+</div>
+@endif
 
 <div class="row m-auto  no-gutters">
     <div class="col-6">
@@ -16,27 +76,10 @@
                     @endforeach
                 </select>
                 <input type="text" id="job_id" name="job_id" hidden>
-                <p>Job Name:</p> <input name="job_name" placeholder="new job name" type="text"  ><br><br>
+                <p>Job Name:</p> <input name="job_name" placeholder="new job name" type="text"><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Career">
             </fieldset>
-            @if (session()->has('NoSelectedCareerError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('NoSelectedCareerError') }}</strong>
-            </div>
-            @endif
-            @if (session()->has('modifyCareerError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('modifyCareerError') }}</strong>
-            </div>
-            @endif
 
-            @if(session()->has('careerModifymessage'))
-            <div class="alert alert-success">
-                {{ session()->get('careerModifymessage') }}
-            </div>
-            @endif
         </form>
     </div>
 
@@ -60,24 +103,7 @@
 
                 <input type="submit" class="btn btn-info " value="Modify Category">
             </fieldset>
-            @if (session()->has('NoSelectedCategoryError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('NoSelectedCategoryError') }}</strong>
-            </div>
-            @endif
-            @if (session()->has('modifyCategoryError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('modifyCategoryError') }}</strong>
-            </div>
-            @endif
 
-            @if(session()->has('categorymodifymessage'))
-            <div class="alert alert-success">
-                {{ session()->get('categorymodifymessage') }}
-            </div>
-            @endif
         </form>
     </div>
 
@@ -99,32 +125,14 @@
                 </select>
                 <input type="text" id="con_id" name="con_id" hidden>
 
-                <p>Content Name:</p> <input name="content_name" type="text"  ><br><br>
-                <p>Content details:</p> <textarea rows="4" cols="50" name="content_details" type="text"  ></textarea><br><br>
-                <p>Content links:</p> <textarea rows="4" cols="50" name="links" type="text"  ></textarea><br><br>
+                <p>Content Name:</p> <input name="content_name" type="text"><br><br>
+                <p>Content details:</p> <textarea rows="4" cols="50" name="content_details"
+                    type="text"></textarea><br><br>
+                <p>Content links:</p> <textarea rows="4" cols="50" name="links" type="text"></textarea><br><br>
                 <p>Content image:</p> <input name="image" type="file"><br><br>
                 <input type="submit" class="btn btn-info " value="Modify Content">
             </fieldset>
 
-            @if (session()->has('NoSelectedContentError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('NoSelectedContentError') }}</strong>
-            </div>
-            @endif
-
-            @if (session()->has('modifyContentError'))
-            <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ session()->get('modifyContentError') }}</strong>
-            </div>
-            @endif
-
-            @if(session()->has('contentmodifymessage'))
-            <div class="alert alert-success">
-                {{ session()->get('contentmodifymessage') }}
-            </div>
-            @endif
         </form>
     </div>
 </div>

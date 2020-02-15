@@ -25,7 +25,7 @@ class ContentController extends Controller
     {
 
         return view('contents.view', [
-            'course' => Content::find($content),
+            'content' => Content::find($content),
 
         ]);
     }
@@ -95,6 +95,6 @@ class ContentController extends Controller
     {
         $row = Content::find($content_id);
         $row->delete();
-        return redirect()->back()->with('deleteContentmessage', $row['content_name'] . "" . 'deleted Successfully !');
+        return redirect()->back()->with('deleteContentmessage', $row['content_name'] . " " . 'deleted Successfully !');
     }
 }

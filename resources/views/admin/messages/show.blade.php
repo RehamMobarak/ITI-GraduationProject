@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 <br>
 <fieldset class="message">
 <legend>Message</legend>

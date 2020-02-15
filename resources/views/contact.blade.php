@@ -10,7 +10,7 @@
           @csrf
           @if(session()->has('contactmessage'))
           <div class="alert alert-success">
-            {{ session()->get('contactmessage') }}
+            {{ session()->get('contactmessage') }} 
           </div>
           @endif
           <div class="row form-group">

@@ -21,6 +21,27 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
 
 
+//privacy
+Route::get('/privacy',function()
+{
+    return view('privacy');
+});
+//terms of use
+Route::get('/terms',function()
+{
+    return view('terms');
+});
+//career
+Route::get('/career',function()
+{
+    return view('career');
+});
+
+Route::get('/chatbot',function()
+{
+    return view('chatbot');
+});
+
 //profiles
 Route::get('/profile','ProfileController@index')->name('profiles.index')->middleware('auth');
 //Route::get('/profile/{profile}/edit','ProfileController@edit')->name('profiles.edit');
@@ -28,7 +49,7 @@ Route::get('/profile/edit','ProfileController@edit')->name('profiles.edit')->mid
 Route::patch("/profile/update",'ProfileController@update')->name('profiles.update')->middleware('auth');
 
 
-//category-content
+//view category-content
 Route::get('/contents/{cat_id}','ContentController@index')->name('contents.index')->middleware('auth');
 Route::get('/categories/{career_id}','CategoryController@index')->name('categories.index')->middleware('auth');
 Route::get('/contents/{content}/view','ContentController@view')->name('contents.view')->middleware('auth');
@@ -63,7 +84,7 @@ Route::get('/faq',function(){
 Route::get('/contactus',function(){
     return view('contact');
 })->name('contactus');
-Route::post('/contactus','Messcontrol.ageController@create');
+Route::post('/contactus','MessageController@create');
 
 
 

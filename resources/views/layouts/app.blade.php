@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/fonts/line-icons/style.css">
+    <!-- //chatbot -->
 
+  
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"> </script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+  
    
 
     <!-- MAIN CSS -->
@@ -62,6 +65,7 @@
 
                                     <li><a href="/faq">Frequently Ask Questions</a></li>
                                     <li><a href="/about">About</a></li>
+                                    <li><a href="/chatbot">Chat Bot</a></li>
                                     <li><a href="/contactus">Contact</a></li>
                                 </ul>
                             </li>
@@ -85,14 +89,14 @@
                                     @endif
                                     <p class="text-center"> {{ Auth::user()->first_name }} </p>
                                     
-                                    <a class="dropdown-item" href="/profile">Profile</a>
+                                    <a class="dropdown-item" href="/profile"><i class="fas fa-user"></i> Profile</a>
                                     @if(Auth::user()->role)
-                                     <a href="/control-panel" class="dropdown-item">Control Panel</a>
-                                     <a href="/viewmessages" class="dropdown-item">Messages<span class="badge badge-dark">4</span></a>
-                                     <a href="/charts" class="dropdown-item">Charts</a>
+                                     <a href="/control-panel" class="dropdown-item"><i class="fas fa-solar-panel"></i> Control Panel</a>
+                                     <a href="/viewmessages" class="dropdown-item"><i class="fas fa-envelope"></i> Messages <span class="badge badge-dark">{{App\Message::count()}}</span></a>
+                                     <a href="/charts" class="dropdown-item"><i class="fas fa-chart-pie"></i> Charts</a>
                                      @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>
                                         {{ __('Logout') }}
                                     </a>
 
@@ -101,7 +105,7 @@
                                     </form>
                                 </div>
                             </li>
-                            
+ 
                             @endguest
 
                         </ul>
@@ -115,36 +119,24 @@
             </div>
         </header>
 
-
-
         @yield('content')
         <footer class="site-footer slanted-footer">
             <div class="container">
                 <div class="row mb-5">
-                    <div class="col-6 col-md-3 mb-4 mb-md-0">
-                        <h3>Scenic Products</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Graphic Design</a></li>
-                            <li><a href="#">Web Developers</a></li>
-                            <li><a href="#">Resources</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-3 mb-4 mb-md-0">
+                   <div class="col-6 col-md-3 mb-4 mb-md-0">
                         <h3>Company</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Resources</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/career">Career</a></li>
+                            <li><a href="#">Blog</a></li>   
                         </ul>
                     </div>
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
                         <h3>Support</h3>
                         <ul class="list-unstyled">
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="/contactus">Support</a></li>
+                            <li><a href="/privacy">Privacy</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
@@ -176,13 +168,15 @@
     </div>
 
 
+
+    
     <!-- SCRIPTS -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/stickyfill.min.js"></script>
     <script src="/js/jquery.fancybox.min.js"></script>
-    <script src="/js/jquery.easing.1.3.js"></script>
+    <!-- <script src="/js/jquery.easing.1.3.js"></script> -->
 
     <script src="/js/jquery.waypoints.min.js"></script>
     <script src="/js/jquery.animateNumber.min.js"></script>
@@ -202,6 +196,7 @@
     </script>
     <script src="/js/mainscript.js"></script>
 
+  
 
 
 </body>

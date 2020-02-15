@@ -18,6 +18,11 @@ textarea {
     background-color: #f8f8f8;
     resize: none;
   }
+.sub-title{
+    text-align: center;
+
+}
+  
 
 .modifycard
 {
@@ -58,6 +63,11 @@ margin:15px;
 }
 .add-career > p{
   color: navy;
+}
+
+.content-title{
+    color: #007bff; 
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .message{

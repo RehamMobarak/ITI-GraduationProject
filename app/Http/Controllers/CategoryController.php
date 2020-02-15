@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
+use App\Category; 
 use App\Content;
 use App\Career;
 use App\category_content;
@@ -110,7 +110,7 @@ class CategoryController extends Controller
     public function delete($category_id)
     {
         $row = Category::find($category_id);
-        $row->delete();
-        return redirect()->back()->with('deleteCategorymessage', $row['category_name'] . "" . ' deleted Successfully !');
+        $row->delete();  
+        return redirect()->back()->with('deleteCategorymessage', $row['category_name'] . " " . ' deleted Successfully !');
     }
 }

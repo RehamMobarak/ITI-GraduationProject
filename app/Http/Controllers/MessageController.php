@@ -15,7 +15,7 @@ class messageController extends Controller
             'last_name' => $request->last_name,
             'email' => $request->email,
             'subject' => $request->subject,
-            'message' => $request->message,
+            'message' => $request->message, 
 
         ]);
         return redirect()->route('contactus')->with('contactmessage', "Thanks " . $request->first_name . " " . ' Your message is sent!');
@@ -24,9 +24,10 @@ class messageController extends Controller
 
     public function index()
     {
+       // $count = Message::count();
         $msgs = Message::paginate(5);
         return view('admin.messages.view_msgs', [
-            'msgs' => $msgs
+            'msgs' => $msgs,
 
         ]);
     }

@@ -9,7 +9,7 @@
         <div class="row mb-5">
             <div class="col-12 text-center" data-aos="fade">
                 <h2 class="section-title mb-3">Categories</h2>
-            </div>
+            </div> 
         </div>
 
         <div class="row">

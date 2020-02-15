@@ -74,6 +74,7 @@ class CareerController extends Controller
 
         Content::create([
             'content_name' => $request->content_name,
+            'description' => $request->description,
             'content_details' => $request->content_details,
             'image' => $path,
             'links' => $request->links
@@ -92,19 +93,28 @@ class CareerController extends Controller
     public function AssignCareerCategory(Request $request)
     {
         //dd($request);
+        if (!isset($request->career_id)) {
+
+            return redirect()->route('control.Add')->with('NoCareer', 'There is no selected career !!');
+        } else { 
         career_category::create(
             [ 
                 'career_id' => $request->career_id,
                 'category_id' => $request->career_category_id,
-            ]
-        );
-        return redirect()->route('control.Add')->with('careercategorymessage', $request->career_id . ' assigned to' . $request->career_category_id);
+            ] );
+
+         return redirect()->route('control.Add')->with('careercategorymessage', $request->career_id . ' assigned to' . $request->career_category_id);
+          }
     }
 
 
     public function AssignCategoryContent(Request $request)
     {
         //dd($request);
+        if (!isset($request->category_id)) {
+
+            return redirect()->route('control.Add')->with('NoCategory', 'There is no selected category !!');
+        } else { 
         category_content::create(
             [
                 'category_id' => $request->category_id,
@@ -113,6 +123,7 @@ class CareerController extends Controller
         );
         return redirect()->route('control.Add')->with('categorycontentmessage', $request->category_id . ' assigned to' . $request->category_content_id);
     }
+}
 
 
     ////////////////////////////////////////////////////
@@ -189,7 +200,7 @@ class CareerController extends Controller
         }
 
 
-        return view('admin.control.modify_career_assignments', [
+        return view('admin.control.modify.modify_career_assignments', [
             'career_categories' => $catsArray,
             'category_names' => $catNamesArray,
 
@@ -215,6 +226,6 @@ class CareerController extends Controller
     {
         $row = Career::find($career_id);
         $row->delete();
-        return redirect()->back()->with('deleteCareermessage', $row['job_name'] . "" . 'deleted Successfully !');
+        return redirect()->back()->with('deleteCareermessage', $row['job_name'] . " " . 'deleted Successfully !');
     }
 }
