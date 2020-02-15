@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             
         [
             [
-                'first_name' => 'admin',
+                'first_name' => 'Admin',
                 'last_name' => 'careery',
                 'email' => 'admin@admin.com',
                 'password' => Hash::make("12345678"),
@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
                 'gender' => 'male',
                 'image' => '/images/avatar.png',
                 'role' =>'admin',
-                'background_img'=>'/images/logo.jpg',
+                'background_img'=>'/images/logo.png',
                 'remember_token' => Str::random(10),
             ],
 
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'gender' => 'female',
                 'image' => '/images/avatar.png',
                 'role' =>'user',
-                'background_img'=>'/images/logo.jpg',
+                'background_img'=>'/images/logo.png',
                 'remember_token' => Str::random(10),
              ],
 
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
                 'gender' => 'female',
                 'image' => '/images/avatar.png',
                 'role' =>'user',
-                'background_img'=>'/images/logo.jpg',
+                'background_img'=>'/images/logo.png',
                 'remember_token' => Str::random(10),
              ],
 
@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
                 'gender' => 'female',
                 'image' => '/images/avatar.png',
                 'role' =>'user',
-                'background_img'=>'/images/logo.jpg',
+                'background_img'=>'/images/logo.png',
                 'remember_token' => Str::random(10),
              ],
     
@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
                 'gender' => 'male',
                 'image' => '/images/avatar.png',
                 'role' =>'user',
-                'background_img'=>'/images/logo.jpg',
+                'background_img'=>'/images/logo.png',
                 'remember_token' => Str::random(10),
              ],
 

@@ -39,12 +39,18 @@
 
                     </div>
 
+
                 </div>
             </div>
 
             <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section mt-5">
                 <div class="row profile-right-section-row">
                     <div class="col-md-12">
+                        @if(session()->has('UpdateProfileImg'))
+                        <div class="alert alert-success alert-block">
+                            {{ session()->get('UpdateProfileImg') }}
+                        </div>
+                        @endif
                         <div class="row">
                             <div class="col-md-8">
                                 <ul class="nav nav-tabs ml-4" role="tablist">
@@ -105,11 +111,7 @@
                                             <div class="col-md-6 ml-3">
                                                 <p>{{ Auth::user()->gender}}</p>
                                             </div>
-                                            @if(session()->has('UpdateProfileImg'))
-                                            <div class="alert alert-success">
-                                                {{ session()->get('UpdateProfileImg') }}
-                                            </div>
-                                            @endif
+
                                         </div>
                                     </div>
                                 </div>
