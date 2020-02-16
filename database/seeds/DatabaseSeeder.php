@@ -396,8 +396,8 @@ class DatabaseSeeder extends Seeder
                     First developed by Tim Berners-Lee in 1990, HTML is short for Hypertext Markup Language. HTML is used to create electronic documents (called pages) that are displayed on the World Wide Web. Each page contains a series of connections to other pages called hyperlinks. Every web page you see on the Internet is written using one version of HTML code or another.
                     ',
                     'image' => '/images/html.png',
-                    'links' => 'https://www.w3schools.com/html/default.asp
-                    https://www.wikihow.com/Learn-HTML
+                    'links' => 'https://www.w3schools.com/html/default.asp,
+                    https://www.wikihow.com/Learn-HTML,
                     https://www.youtube.com/watch?v=UB1O30fR-EE',
                     'created_at'=>now(),
 
@@ -408,8 +408,8 @@ class DatabaseSeeder extends Seeder
                     'description' => 'used to Design web pages',
                     'content_details' => 'Stands for "Cascading Style Sheet." Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a pages HTML.',
                     'image' => '/images/css.png',
-                    'links' => 'https://www.w3schools.com/css/default.asp
-                    https://www.youtube.com/watch?v=yfoY53QXEnI
+                    'links' => 'https://www.w3schools.com/css/default.asp,
+                    https://www.youtube.com/watch?v=yfoY53QXEnI,
                     https://www.youtube.com/watch?v=1Rs2ND1ryYc' ,
                     'created_at'=>now(),
 
@@ -428,8 +428,8 @@ class DatabaseSeeder extends Seeder
                     Open and cross-platform
                     ',
                     'image' => '/images/js.png',
-                    'links' => 'https://www.w3schools.com/js/default.asp 
-                    https://www.youtube.com/watch?v=W6NZfCO5SIk
+                    'links' => 'https://www.w3schools.com/js/default.asp ,
+                    https://www.youtube.com/watch?v=W6NZfCO5SIk,
                     https://www.youtube.com/watch?v=PkZNo7MFNFg' ,
                     'created_at'=>now(),
 
@@ -443,9 +443,9 @@ class DatabaseSeeder extends Seeder
                     PHP is a script language and interpreter that is freely available and used primarily on Linux Web servers. PHP, originally derived from Personal Home Page Tools, now stands for PHP: Hypertext Preprocessor, which the PHP FAQ describes as a "recursive acronym."
                     ',
                     'image' => '/images/php.png',
-                    'links' => 'https://www.youtube.com/watch?v=OK_JCtrrv-c
-                    https://www.wikihow.com/Write-PHP-Scripts
-                    https://www.php.net/manual/en/index.php
+                    'links' => 'https://www.youtube.com/watch?v=OK_JCtrrv-c,
+                    https://www.wikihow.com/Write-PHP-Scripts,
+                    https://www.php.net/manual/en/index.php,
                     https://www.w3schools.com/php/default.asp',
                     'created_at'=>now(),
 
@@ -456,10 +456,10 @@ class DatabaseSeeder extends Seeder
                     'description' => 'used as a framwork with php ',
                     'content_details' => 'Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation toward syntactic sugar.',
                     'image' => '/images/laravel.png',
-                    'links' => 'https://laravel.com/
-                    https://www.youtube.com/watch?v=ImtZ5yENzgE
-                    https://www.youtube.com/watch?v=bkyjiXSx6WE
-                    https://www.youtube.com/watch?v=bkyjiXSx6WE' ,
+                    'links' => 'https://laravel.com/,
+                    https://www.youtube.com/watch?v=ImtZ5yENzgE,
+                    https://www.youtube.com/watch?v=bkyjiXSx6WE,
+                    https://laracasts.com' ,
                     'created_at'=>now(),
 
                 ],
@@ -470,8 +470,8 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'Structured Query Language (SQL) is a standard computer language for relational database management and data manipulation. SQL is used to query, insert, update and modify data. Most relational databases support SQL, which is an added benefit for database administrators (DBAs), as they are often required to support databases across several different platforms.
                     ',
                     'image' => '/images/mysql.png',
-                    'links' => 'https://www.w3schools.com/sql/
-                    https://www.youtube.com/watch?v=HXV3zeQKqGY
+                    'links' => 'https://www.w3schools.com/sql/,
+                    https://www.youtube.com/watch?v=HXV3zeQKqGY,
                     https://www.youtube.com/watch?v=7S_tz1z_5bA' ,
                     'created_at'=>now(),
 
@@ -486,8 +486,8 @@ class DatabaseSeeder extends Seeder
                     wift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, iPadOS, macOS, watchOS, tvOS, Linux, and z/OS. "
                     ',
                     'image' => '/images/swift.png',
-                    'links' => 'https://codewithchris.com/learn-swift/
-                    https://www.youtube.com/watch?v=Ulp1Kimblg0
+                    'links' => 'https://codewithchris.com/learn-swift/,
+                    https://www.youtube.com/watch?v=Ulp1Kimblg0,
                     https://www.youtube.com/watch?v=comQ1-x2a1Q',
                     'created_at'=>now(),
 
@@ -499,8 +499,8 @@ class DatabaseSeeder extends Seeder
                     'description' => 'contains a bunch of tools, the simulators and the organizer which is good for deployments in tandem with Configurator.',
                     'content_details' => 'The integrated development environment (IDE) from Apple that is used to create, compile and test Mac OS X and iOS (iPhone/iPad/iPod) applications. Introduced with OS X Version 10.3 (Panther) and evolving from Apples Project Builder, Xcode supports writing in C, C++, Objective-C, Swift, AppleScript, Java and Cocoa. See Mac OS X, Objective-C and Cocoa.',
                     'image' => '/images/Xcode.png',
-                    'links' => 'https://codewithchris.com/xcode-tutorial/
-                    https://developer.apple.com/xcode/
+                    'links' => 'https://codewithchris.com/xcode-tutorial/,
+                    https://developer.apple.com/xcode/,
                     https://www.youtube.com/watch?v=lOZSQzsrNVQ&list=PLomLuS7LD16dIRNankzo6XoP6SKMicZi2' ,
                     'created_at'=>now(),
 
@@ -511,8 +511,8 @@ class DatabaseSeeder extends Seeder
                     'description' => 'high-level application programming interfaces available in Cocoa Touch ',
                     'content_details' => 'Cocoa Touch is a user interface framework provided by Apple for building software applications for products like iPhone, iPad and iPod Touch. It is primarily written in Objective C language and is based on Mac OS X. Cocoa Touch was developed based on model view controller software architecture. The high-level application programming interfaces available in Cocoa Touch help to make animation, networking, and adding the appearance and behavior of the native platform to the developed applications possible with less code development.',
                     'image' => '/images/cocoao touch.png',
-                    'links' => 'https://www.techopedia.com/definition/27562/cocoa-touch-ios
-                    https://www.youtube.com/watch?v=X_MJd8wqTBM&list=PLE83F832121568D36
+                    'links' => 'https://www.techopedia.com/definition/27562/cocoa-touch-ios,
+                    https://www.youtube.com/watch?v=X_MJd8wqTBM&list=PLE83F832121568D36,
                     https://www.youtube.com/watch?v=oesNwgHn1ws&list=PL78146AD7DE9EE909' ,
                     'created_at'=>now(),
 
@@ -526,8 +526,8 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'Java is a high-level programming language developed by Sun Microsystems. It was originally designed for developing programs for set-top boxes and handheld devices, but later became a popular choice for creating web applications.
                     ',
                     'image' => '/images/java.png',
-                    'links' => 'https://www.youtube.com/watch?v=Hl-zzrqQoSE&list=PLFE2CE09D83EE3E28
-                    https://www.youtube.com/watch?v=TBWX97e1E9g&list=PLE7E8B7F4856C9B19
+                    'links' => 'https://www.youtube.com/watch?v=Hl-zzrqQoSE&list=PLFE2CE09D83EE3E28,
+                    https://www.youtube.com/watch?v=TBWX97e1E9g&list=PLE7E8B7F4856C9B19,
                     https://www.java.com/en/' ,
                     'created_at'=>now(),
 
@@ -541,8 +541,8 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'Jtands for "Software Development Kit." An SDK is a collection of software used for developing applications for a specific device or operating system. Examples of SDKs include the Windows 7 SDK, the Mac OS X SDK, and the iPhone SDK.
                     ',
                     'image' => '/images/SDK.png',
-                    'links' => 'https://www.youtube.com/watch?v=7hgmTnxgpdo
-                    https://developer.android.com/sdk/older_releases.html
+                    'links' => 'https://www.youtube.com/watch?v=7hgmTnxgpdo,
+                    https://developer.android.com/sdk/older_releases.html,
                     https://www.webopedia.com/TERM/S/SDK.html' ,
                     'created_at'=>now(),
                     
@@ -556,8 +556,8 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'Stands for "Extensible Markup Language." (Yes, technically it should be EML). XML is used to define documents with a standard format that can be read by any XML-compatible application. The language can be used with HTML pages, but XML itself is not a markup language.
                     ',
                     'image' => '/images/XML.png',
-                    'links' => 'https://www.w3schools.com/xml/xml_whatis.asp
-                    https://www.w3.org/XML/
+                    'links' => 'https://www.w3schools.com/xml/xml_whatis.asp,
+                    https://www.w3.org/XML/,
                     https://www.youtube.com/watch?v=n-y-YHVZSwk&list=PLmdFG1KSZhosqwkP-BCtcMq0KubZ4v1Cm' ,
                     'created_at'=>now(),
                     
@@ -571,7 +571,7 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'the replacement successor to Windows Mobile and Zune. Windows Phone featured a new user interface derived from Metro design language. Unlike Windows Mobile, it was primarily aimed at the consumer market rather than the enterprise market. It was first launched in October 2010 with Windows Phone 7. Windows Phone 8.1 is the latest public release of the operating system, released to manufacturing on April 14, 2014.
                     ',
                     'image' => '/images/windows_phone.png',
-                    'links' => 'https://www.w3schools.com/xml/xml_whatis.asp
+                    'links' => 'https://www.w3schools.com/xml/xml_whatis.asp,
                     https://www.w3.org/XML/
                    ' ,
                     'created_at'=>now(),
@@ -587,8 +587,8 @@ class DatabaseSeeder extends Seeder
                     Cloud storage services may be accessed through a colocated cloud computing service, a web service application programming interface (API) or by applications that utilize the API, such as cloud desktop storage, a cloud storage gateway or Web-based content management systems.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.guru99.com/cloud-computing-for-beginners.html
-                    https://www.javatpoint.com/cloud-computing-tutorial/
+                    'links' => 'https://www.guru99.com/cloud-computing-for-beginners.html,
+                    https://www.javatpoint.com/cloud-computing-tutorial/,
                     https://www.udemy.com/course/introduction-to-cloud-computing/
                    ' ,
                     'created_at'=>now(),
@@ -603,8 +603,8 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'Cloud consultants combine investigative and analytical skills in their work. They use cloud-based computer programs and systems to address the specific business needs of their clients.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://cloud.google.com/training/courses/core-fundamentals
-                    https://www.ibm.com/cloud/learn/cloud
+                    'links' => 'https://cloud.google.com/training/courses/core-fundamentals,
+                    https://www.ibm.com/cloud/learn/cloud,
                     https://www.coursera.org/learn/cloud-computing
                    ' ,
                     'created_at'=>now(),
@@ -619,7 +619,7 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'A cloud software developer designs and develops secure cloud applications, services, and products. This can include everything from back-end, front-end, web application, full-stack, data and application integration, and cloud application deployment. Similar responsibilities to a traditional software developer’s job, yet with a different focus.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.udemy.com/course/learn-cloud-computing-from-scratch/
+                    'links' => 'https://www.udemy.com/course/learn-cloud-computing-from-scratch/,
                     https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
                     
                    ' ,
@@ -635,9 +635,9 @@ class DatabaseSeeder extends Seeder
                     The cloud engineer position can be broken into multiple roles, including cloud architect, cloud software engineer, cloud security engineer, cloud systems engineer and cloud network engineer. Each position focuses on a specific type of cloud computing, rather than the technology as a whole. Companies that hire cloud engineers are often looking to deploy cloud services or further their cloud understanding and technology.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -654,9 +654,9 @@ class DatabaseSeeder extends Seeder
                     The role of the network administrator can vary significantly depending on an organizations size, location, and socio-economic considerations. Some organizations work on a user-to-technical support ratio,[1][2] whilst others implement many other strategies.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -672,9 +672,9 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'An IT analyst, also called a systems analyst, designs and implements information systems that optimize organizational efficiency. The process begins with managers, who provide the IT analyst with a broad objective, like capturing marketing research data. The IT analyst employs modeling, information engineering and cost-based accounting to develop a system that satisfies both management and end-users in the most cost-effective and efficient way possible. Upon approval, the IT analyst oversees its implementation by managing programmers, coders and equipment vendors to ensure the design is properly executed in a timely manner and stays within budget. The IT analyst also debugs the system and ensures that it is error-free.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -689,9 +689,9 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'IT coordinators, also referred to as managers, are responsible for determining, developing and implementing an organizations information technology goals. Their activities can include reviewing and filling internal help requests and monitoring computer performance for potential problems. Administrative tasks include tracking computer-related orders and bills, maintaining license documentation and renewing upgrades. IT coordinators may also provide an organization with day-to-day computer support, such as installing basic software and providing updates.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -709,9 +709,9 @@ class DatabaseSeeder extends Seeder
                     Database administrators often plan security measures, making sure that data is secure from unauthorized access. Many databases contain personal or financial information, making security important. Database administrators are responsible for backing up systems in case of a power outage or other disaster. They also ensure the integrity of the database, guaranteeing that the data stored in it comes from reliable sources.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -727,9 +727,9 @@ class DatabaseSeeder extends Seeder
                     Computer systems analysts use a variety of techniques such as data modeling to design computer systems. Data modeling allows analysts to view the processes and data flows even before programs have been written.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,
@@ -744,9 +744,9 @@ class DatabaseSeeder extends Seeder
                     'content_details' => 'IT leadership is the group of senior executives in an organization responsible for the information technology (IT) infrastructure and applications that enable and drive the overarching business strategy and goals. The top IT leader is most frequently referred to  as the chief information officer , or CIO, but at some organizations this responsibility is now shared with a variety of "information chiefs," including the chief digital officer, the chief data officer and the chief analytics officer.
                     ',
                     'image' => '/images/logo.png',
-                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp
-                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer
-                    https://cloud.google.com/training/courses/core-fundamentals
+                    'links' => 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp,
+                    https://www.lynda.com/learning-paths/Developer/become-a-cloud-developer,
+                    https://cloud.google.com/training/courses/core-fundamentals,
                     https://www.ibm.com/cloud/learn/cloud
                     
                    ' ,

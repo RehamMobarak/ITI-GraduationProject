@@ -17,7 +17,8 @@
         <p>{{$content['content_details']}}</p>
         <div class="d-flex flex-column">
         <h4>Links<h4>
-        <span style="color:blue">{{$content['links']}}</span>
+        
+        <a style="color:blue" href="{!! str_replace(',', '<br>', $content->links) !!}">{!! str_replace(",", "<br>", $content->links) !!}</a>
         </div>
       </div>
     </div>
