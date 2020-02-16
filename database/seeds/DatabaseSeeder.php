@@ -46,8 +46,8 @@ class DatabaseSeeder extends Seeder
 
              [
                 'first_name' => 'reham',
-                'last_name' => 'mubarak',
-                'email' => 'r@gmail.com',
+                'last_name' => 'mobarak',
+                'email' => 'reham.a.mobarak@gmail.com',
                 'password' => Hash::make("12345678"),
                 'country' => 'London',
                 'birthdate' => '1996-08-04', 
@@ -1009,7 +1009,7 @@ class DatabaseSeeder extends Seeder
                 [
                     'id' => '8',
                     'name' => 'it analyst',
-                    'image' => '/images/It Analyst_mindmap.png',
+                    'image' => '/images/It Analyst.png',
                     'created_at'=>now(),
                     
                 ],

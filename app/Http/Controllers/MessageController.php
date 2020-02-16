@@ -24,7 +24,7 @@ class messageController extends Controller
 
     public function index()
     {
-       // $count = Message::count();
+       
         $msgs = Message::paginate(5);
         return view('admin.messages.view_msgs', [
             'msgs' => $msgs,
@@ -56,11 +56,11 @@ class messageController extends Controller
 
     public function sendMail()
     {
-        // dd(request('replymsg'));
+       
         Mail::raw(request('replymsg'), function ($message) {
             $message
             ->to(request('email'))
-            ->subject('HELLO THERE WITH TEXTAREA!');
+            ->subject('HELLO From Careery!');
         });
         return redirect()->route("view_messages")->with('replyMsg','Reply Sent Successfuly  TO '.request('email'));
     }
